@@ -1,0 +1,2 @@
+# IdolKobe
+A small attempt
