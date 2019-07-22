@@ -10,6 +10,12 @@
   <sql id="Base_Column_List">
     ID, USERNAME, PASSWORD, CREATETIME
   </sql>
+  <select id="selectByUserNameAndPassword" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from base_user
+    where username = #{userName,jdbcType=VARCHAR} and password = #{password,jdbcType=VARCHAR}
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
